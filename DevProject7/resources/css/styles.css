@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+html {
+    font-size: 16px;
+    background-color: white;
+    font-family: Helvetica;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+.container > * {
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
+    border-radius: 10px;
+}
+
+.header {
+    width: 100%;
+    min-height: 4rem;
+    border-bottom: 1px solid lightslategray;
+    font-size: 1.3rem;
+    background-color: rgba(245, 222, 179, 0.75);
+}
+
+ul {
+    text-align: right;
+}
+
+.header li {
+    list-style: none;
+    display: inline-block;
+    margin: 1rem;
+    color: black;
+    font-weight: bolder;
+}
+
+.header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+/*  Main  */
+
+.main {
+    background-color: seashell;
+    font-size: 24px;
+    text-align: left;
+}
+
+.main > h2 {
+    text-align: center;
+    color: darkgray;
+}
+
+.story_img {
+    float: left;
+    padding-right: 1rem;
+}
+
+.text-story {
+    text-align: justify;
+}
+/*  Aside  */
+
+.aside1 {
+    background-color: antiquewhite;
+}
+
+.aside1 >.col> h3 {
+    color: darkgray;
+}
+
+.aside2 {
+    background-color: seashell;
+}
+
+.col {
+    display: inline-flex;
+    flex-direction: column;
+    
+}
+
+.aside2 > div {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+/* FOoooTer  */
+
+.footer {
+    background-color: lightslategray;
+    text-align: left;
+    text-indent: 5rem;
+    
+}
+
+.footer > p, h3 {
+    color: white;
+    font-weight: bolder;
+}
+
+.footer > h3 {
+    text-decoration: underline;
+}
+@media all and (min-width: 800px) {
+    .main {
+        flex: 2;
+    }
+    .aside1 {
+        order: 1;
+    }
+    .aside2 {
+        order: 2;
+    }
+    .main {
+        order: 2;
+    }
+    .footer {
+        order: 4;
+    }
+}
+
+@media all and (min-width: 600px) {
+    .aside1 {
+        flex: 1;
+    }
+}
